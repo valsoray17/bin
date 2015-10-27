@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ $# -ne 1 ]
+then
+  echo "command usage: ziptl filename"
+else
+  zipinfo -1 $1 | cut -d"/" -f1 | uniq
