@@ -4,5 +4,5 @@ extension="${filename##*.}"
 filename="${filename%.*}"
 
 echo $filename
-convert $fullfile -scale 3% -scale 1000% ${filename}_pixalated.${extension}
-convert ${filename}_pixalated.${extension} -geometry 1920x1080^ -gravity center -crop 1920x1080+0+0 ${filename}_cropped.${extension}
+convert $fullfile -scale 3% -scale 1000% ${filename}_pixelated.${extension}
+convert ${filename}_pixelated.${extension} -geometry 1920x1080^ -gravity center -crop 1920x1080+0+0 ${filename}_cropped.${extension}
