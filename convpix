@@ -1,8 +1,10 @@
+#!/bin/bash
+
 fullfile=$1
 filename=$(basename "$fullfile")
 extension="${filename##*.}"
 filename="${filename%.*}"
 
 echo $filename
-convert $fullfile -scale 3% -scale 1000% ${filename}_pixelated.${extension}
-convert ${filename}_pixelated.${extension} -geometry 1920x1080^ -gravity center -crop 1920x1080+0+0 ${filename}_cropped.${extension}
+convert $fullfile -scale 5% -scale 1000% ${filename}_pixelated.${extension}
+convert ${filename}_pixelated.${extension} -geometry 2560x1440^ -gravity center -crop 2560x1440+0+0 ${filename}_cropped.${extension}
